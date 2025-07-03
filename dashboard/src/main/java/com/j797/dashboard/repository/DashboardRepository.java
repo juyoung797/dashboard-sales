@@ -35,8 +35,8 @@ public class DashboardRepository {
     public List<CustomerRank> findCustomerRankings() {
         String sql = """
                 SELECT customer_id,
-                       total_spent,
-                       RANK() OVER (ORDER BY total_spent DESC) AS rank
+                        total_spent,
+                        RANK() OVER (ORDER BY total_spent DESC) AS rank
                 FROM customer_spending
                 """;
         return jdbcTemplate.query(sql, customerRankRowMapper);
