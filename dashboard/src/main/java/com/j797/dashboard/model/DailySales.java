@@ -15,7 +15,6 @@ public class DailySales {
         this.saleDate = saleDate;
         this.totalAmount = totalAmount;
         this.orderCount = orderCount;
-
     }
 
     public LocalDate getSaleDate() {
